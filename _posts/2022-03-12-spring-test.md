@@ -1,11 +1,11 @@
 ---
 layout: post
-title: "Quick kramdown demo"
-description: "A quick demo post to some kramdown features."
-categories: [demo]
-tags: [demo, jekyll]
+title: "spring"
+description: "스프링에 관하여"
+categories: [spring]
+tags: [spring, eclips]
 redirect_from:
-  - /2017/05/25/
+  - /2022/03/13/
 ---
 
 > This is [kramdown][kramdown] formatting test page for [Simple Texture][Simple Texture] theme.
