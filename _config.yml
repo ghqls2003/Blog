@@ -23,7 +23,7 @@ sass:
 # Site Data
 url: https://github.com/ghqls2003 # the base hostname & protocol for your site, e.g. http://example.com
 baseurl: /Blog # the subpath of your site, e.g. /blog
-title: Ryong Blog
+title: Ryong Own Blog
 description: "Never Ending Effort, Self-Confidence"
 keywords: 'jekyll,theme,blog'
 author:
