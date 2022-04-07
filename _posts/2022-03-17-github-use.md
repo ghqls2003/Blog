@@ -13,7 +13,7 @@ redirect_from:
 * Kramdown table of contents
 {:toc .toc}
 
-## 깃허브의 레파지토리를 다른 컴퓨터에서도 사용하기!
+# <ins>깃허브의 레파지토리를 다른 컴퓨터에서도 사용하기!</ins>
 ~~~~
 1. X 레파지토리를 A 컴퓨터에서 생성
       git init
