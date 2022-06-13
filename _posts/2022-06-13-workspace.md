@@ -18,41 +18,41 @@ redirect_from:
 1. 카멜 표기법(Camel Case)
 > 첫 글자를 대문자로 적되, 맨 앞에 오는 글자는 소문자로 표기하는 것이다.<br>
 표기한 모습이 낙타의 등과 같다고 하여 카멜 표기법이라고 부른다.
-~~~
+~~~java
 int totalNumber;
 ~~~
 
 2. 파스칼 표기법(Pascal Case)
 > 카멜표기법과 거의 흡사하지만 맨 앞에 오는 글자도 대문자로 표기하는 것이다.
-~~~
+~~~java
 int TotalNumber;
 ~~~
 
 3. 헝가리안 표기법(Hungarian Notation)
 > 접두어에 자료형을 알아 볼 수 있도록 표기하는 것. 요즘은 잘 사용하지 않는 것 같다.
-~~~
+~~~java
 String strName;
 ~~~
 
 4. 스네이크 표기법(Snake Case)
 > 단어 사이에 언더바(_)를 넣어서 표기하는 것.
-~~~
+~~~java
 int total_number;
 ~~~
 
 > 추가로 괄호의 위치도 다양하다.<br>
-~~~
+~~~java
 int main()
 {
       return;
 }
 ~~~
-~~~
+~~~java
 int main() {
       return;
 }
 ~~~
-~~~
+~~~java
 int main() {return;}
 ~~~
 

@@ -48,7 +48,7 @@ C:\Users\Administrator\Desktop\work_space>Blog----------o
 ## "wdm", "webrick"
 > "wdm"과 "webrick"은 에러메시지가 뜨면 해결 방법을 제시해준다.
 
-~~~~
+~~~~ruby
 "wdm" => Please add the following to your Gemfile to avoid polling for changes:
             gem 'wdm', '>= 0.1.0' if Gem.win_platform?
 
