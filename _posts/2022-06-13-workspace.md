@@ -14,7 +14,6 @@ redirect_from:
 {:toc .toc}
 
 # <ins>코드 작성 시 다양한 표기 방법</ins>
-
 1. 카멜 표기법(Camel Case)
 > 첫 글자를 대문자로 적되, 맨 앞에 오는 글자는 소문자로 표기하는 것이다.<br>
 표기한 모습이 낙타의 등과 같다고 하여 카멜 표기법이라고 부른다.
@@ -58,7 +57,6 @@ int main() {return;}
 
 
 # <ins>Eclipse 성능 빠르게 사용하기</ins>
-
 1. 메모리 정리
 > - Window -> Perference -> General -> "Show Heap status" 선택.
 <a class="post-image" href="{{site.baseurl}}/assets/images/work/heap1.png">
