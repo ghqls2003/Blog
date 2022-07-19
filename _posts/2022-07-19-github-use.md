@@ -13,9 +13,33 @@ redirect_from:
 * Kramdown table of contents
 {:toc .toc}
 
-# <ins>깃허브의 레파지토리를 다른 컴퓨터에서도 사용하기</ins>
+# <ins> 깃허브 연결하기 </ins>
+#### 1. github에 레포지토리 생성하기
+<a class="post-image" href="{{site.baseurl}}/assets/images/github/leaflet1.png">
+<img itemprop="image" data-src="{{site.baseurl}}/assets/images/github/leaflet1.png" src="{{site.baseurl}}/assets/javascripts/unveil/loader.gif" alt="왜안떠" />
+</a>
+
+#### 2. 로컬 폴더 생성
+<a class="post-image" href="{{site.baseurl}}/assets/images/github/folder1.png">
+<img itemprop="image" data-src="{{site.baseurl}}/assets/images/github/folder1.png" src="{{site.baseurl}}/assets/javascripts/unveil/loader.gif" alt="왜안떠" />
+</a>
+
+#### 3. 로컬 폴더와 저장소 연결
+1. 터미널에서 "cd 로컬폴더"
+2. git init
+3. git add .
+4. git commit -m "message"
+5. git branch -M main
+6. github 레포지토리 에서 HTTPS 주소 복사
+<a class="post-image" href="{{site.baseurl}}/assets/images/github/code1.png">
+<img itemprop="image" data-src="{{site.baseurl}}/assets/images/github/code1.png" src="{{site.baseurl}}/assets/javascripts/unveil/loader.gif" alt="왜안떠" />
+</a>
+3. git remote origin HTTPS 주소
+
+
+# <ins>깃허브의 레포지토리를 다른 컴퓨터에서도 사용하기</ins>
 ~~~~
-1. X 레파지토리를 A 컴퓨터에서 생성
+1. X 레포지토리를 A 컴퓨터에서 생성
       git init
       git add .
       git commit -m "text-anything"
@@ -23,7 +47,7 @@ redirect_from:
       git remote add origin https://github.com/계정명/레포지토리명.git
       git push -u origin main
 
-2. X 레파지토리를 B 컴퓨터에 복사하기
+2. X 레포지토리를 B 컴퓨터에 복사하기
       git init
       git clone https://github.com/계정명/레포지토리명.git
       이후부터는 add, commit, push 그냥 사용하면 됨
