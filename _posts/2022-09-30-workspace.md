@@ -5,7 +5,7 @@ description: "업무 중 공부"
 categories: [work]
 tags: [work, coding]
 redirect_from:
-  - /2022/06/13/
+  - /2022/09/30/
 ---
 
 > 업무 중 공부하거나 복습하는 것.
@@ -104,3 +104,25 @@ Window → Preferences → Gerneal → Workspace → Build automatically 항목�
 파일이 많을 경우 Ctrl 키에 관련된 기능을 끄는 것이 좋습니다. 코드를 복사 붙여넣기 진행 시 Ctrl 키를 누르면 Hyperlinking이 항상 동작을 하기 때문에 느려지는 경우가 있습니다. <br>
 방지하기 위해 키를 변경합니다.<br>
 Windows → Preferences → General → Editors → Text Editors → Hyperlinking의 "Default modifier key"를 Alt로 변경해서 사용합니다.
+
+
+# <ins>위/경도의 도분초 변환</ins>
+> <a class="post-image" href="{{site.baseurl}}/assets/images/work/latlng1.png">
+<img itemprop="image" data-src="{{site.baseurl}}/assets/images/work/latlng1.png" src="{{site.baseurl}}/assets/javascripts/unveil/loader.gif" alt="왜안떠" />
+</a>
+<a class="post-image" href="{{site.baseurl}}/assets/images/work/latlng2.png">
+<img itemprop="image" data-src="{{site.baseurl}}/assets/images/work/latlng2.png" src="{{site.baseurl}}/assets/javascripts/unveil/loader.gif" alt="왜안떠" />
+</a>  
+ex) 36°10'09.91" -> 36도 10분 9.91초  
+<b>1. 도분초 -> 좌표 (도)</b>  
+1) 정수자리는 그냥 도를 그대로 가져온다. 36도  
+2) 소수자리는 다음과 같이 계산한다. (분/60)+(초/3600)  
+계산 결과 36+((10/60)+(9.91/3600)) = 36.16941944  
+<b>2. 좌표 (도) -> 도분초</b>  
+도 = INT(좌표)  
+분 = INT((좌표 - 도) * 60)  
+초 = ((좌표 - 도) * 60 - 분 ) * 60  
+도 = 36°  
+분 = INT( 0.16941944 * 60) = INT(10.1651664) = 10'  
+초 = (0.16941944 * 60 - 10) * 60 = (10.1651664 - 10) * 60 = 0.1651664 * 60 = 9.909984" = 약 9.91"  
+* INT(x)는 정수. 소수점 버림을 의미.  
