@@ -14,27 +14,40 @@ redirect_from:
 {:toc .toc}
 
 # <ins> 깃허브 연결하기 </ins>
+### 1. 일반적인 연결과 페이지
 #### 1. github에 레포지토리 생성하기
+> 
 <a class="post-image" href="{{site.baseurl}}/assets/images/github/leaflet1.png">
 <img itemprop="image" data-src="{{site.baseurl}}/assets/images/github/leaflet1.png" src="{{site.baseurl}}/assets/javascripts/unveil/loader.gif" alt="왜안떠" />
 </a>
 
 #### 2. 로컬 폴더 생성
+> 
 <a class="post-image" href="{{site.baseurl}}/assets/images/github/folder1.png">
-<img itemprop="image" data-src="{{site.baseurl}}/assets/images/github/folder1.png" src="{{site.baseurl}}/assets/javascripts/unveil/loader.gif" alt="왜안떠" />
+      <img itemprop="image" data-src="{{site.baseurl}}/assets/images/github/folder1.png" src="{{site.baseurl}}/assets/javascripts/unveil/loader.gif" alt="왜안떠" />
 </a>
 
 #### 3. 로컬 폴더와 저장소 연결
-1. 터미널에서 "cd 로컬폴더"
+> 1. 터미널에서 "cd 로컬폴더"
 2. git init
 3. git add .
 4. git commit -m "message"
 5. git branch -M main
 6. github 레포지토리 에서 HTTPS 주소 복사
 <a class="post-image" href="{{site.baseurl}}/assets/images/github/code1.png">
-<img itemprop="image" data-src="{{site.baseurl}}/assets/images/github/code1.png" src="{{site.baseurl}}/assets/javascripts/unveil/loader.gif" alt="왜안떠" />
+      <img itemprop="image" data-src="{{site.baseurl}}/assets/images/github/code1.png" src="{{site.baseurl}}/assets/javascripts/unveil/loader.gif" alt="왜안떠" />
 </a>
-3. git remote origin HTTPS 주소
+7. git remote origin HTTPS 주소
+
+#### 4. pages로 url페이지 이용하기
+> 1. Setting 클릭 -> 좌측 리스트의 "Code and automation"에서 Pages 클릭
+2. Branch 'none'을 'main'으로 변경
+3. 변경 후, 현 페이지에서 새로고침을 하면 상단에 아래와 같이 url이 표시됨(소요시간 1분 미만)  
+<a class="post-image" href="{{site.baseurl}}/assets/images/github/Pages.png">
+      <img itemprop="image" data-src="{{site.baseurl}}/assets/images/github/Pages.png" src="{{site.baseurl}}/assets/javascripts/unveil/loader.gif" alt="왜안떠" />
+</a>
+
+### 2. React 연결과 페이지
 
 
 # <ins>깃허브의 레포지토리를 다른 컴퓨터에서도 사용하기</ins>
