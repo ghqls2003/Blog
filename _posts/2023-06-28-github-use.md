@@ -3,9 +3,9 @@ layout: post
 title: "about_Github"
 description: "깃허브 사용하기"
 categories: [github]
-tags: [github, jekyll]
+tags: [github, jekyll, react_git]
 redirect_from:
-  - /2022/05/31/
+  - /2023/06/28/
 ---
 
 > 깃허브 사용에 관한 것.
@@ -37,7 +37,7 @@ redirect_from:
 <a class="post-image" href="{{site.baseurl}}/assets/images/github/code1.png">
       <img itemprop="image" data-src="{{site.baseurl}}/assets/images/github/code1.png" src="{{site.baseurl}}/assets/javascripts/unveil/loader.gif" alt="왜안떠" />
 </a>
-7. git remote origin HTTPS 주소
+7. git remote origin HTTPS 주소 입력
 
 #### 4. pages로 url페이지 이용하기
 > 1. Setting 클릭 -> 좌측 리스트의 "Code and automation"에서 Pages 클릭
@@ -48,6 +48,35 @@ redirect_from:
 </a>
 
 ### 2. React 연결과 페이지
+#### 1. gh-pages 패키지 설치
+> React 프로젝트는 상당히 무겁기 때문에 build를 거쳐야한다.  
+먼저, ___npm install gh-pages___ 또는 ___yarn add gh-pages___ 를 터미널에 입력하여 설치한다.
+
+#### 2. package.json 수정
+> 해당 디렉터리의 package.json 파일의 "scripts"를 수정한다  
+~~~js
+"scripts": {
+      ...default...,
+      "predeploy": "npm run build",
+      "deploy": "gh-pages -d build"
+}
+~~~
+> 이후 가장 아래에 "homepage" 항목을 추가한다.  
+~~~js
+"homepage": "https://ghqls2003.github.io/Blog/"
+~~~
+
+#### 3. 빌드와 배포
+> 기본적인 remote까지의 과정의 위의 일반적인 과정을 따라하면 된다.  
+프로젝트의 내용을 add - commit - push까지 한 뒤에, ___npm run deploy___ 를 추가로 입력한다.  
+아래와 같은 문구가 보이면 완료된 것이다.  
+<a class="post-image" href="{{site.baseurl}}/assets/images/github/reactBuild.png">
+      <img itemprop="image" data-src="{{site.baseurl}}/assets/images/github/reactBuild.png" src="{{site.baseurl}}/assets/javascripts/unveil/loader.gif" alt="왜안떠" />
+</a>
+
+#### 4. github branch 변경 및 Pages
+> 이제 github에서 해당 레포지토리의 Setting에서 Pages를 보면 branch에 gh-pages라는 새 branch가 생겼을 것이다.  
+branch를 gh-pages로 변경해주면 페이지가 배포되어 이용 할 수 있다.
 
 
 # <ins>깃허브의 레포지토리를 다른 컴퓨터에서도 사용하기</ins>
@@ -70,8 +99,11 @@ redirect_from:
 ~~~~
 
 
-# <ins>jekyll 사용 시 자주 뜨는 Error</ins>
-## Path
+# <ins>Error 다루기</ins>
+## <ins> "git push"의 ![rejected] main -> main(fetch first)</ins>
+
+## <ins>jekyll 사용 시 자주 뜨는 Error</ins>
+### Path
 > 보통 루비와 jekyll의 설치까지는 무난하게 진행이 된다.<br>
 하지만 "jekyll serve"나 "bundle exec jekyll serve" 입력 시, 에러가 나는 경우가 많다.<br>
 그 중 대표적으로 터미널에 표시되는 현재 프로젝트의 경로가 상위인 경우가 많다.
@@ -82,7 +114,7 @@ C:\Users\Administrator\Desktop\work_space>--------------x
 C:\Users\Administrator\Desktop\work_space>Blog----------o
 ~~~
 
-## "wdm", "webrick"
+### "wdm", "webrick"
 > "wdm"과 "webrick"은 에러메시지가 뜨면 해결 방법을 제시해준다.
 
 ~~~~ruby
