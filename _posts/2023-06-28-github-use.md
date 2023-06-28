@@ -101,6 +101,18 @@ branch를 gh-pages로 변경해주면 페이지가 배포되어 이용 할 수 �
 
 # <ins>Error 다루기</ins>
 ## <ins> "git push"의 ![rejected] main -> main(fetch first)</ins>
+> add -> commit -> push를 하면서 종종 "![rejected] main -> main (fetch first)"와 같은 에러를 만난다.  
+해당 에러는 원격저장소와 현재 작업중인 로컬저장소가 동기화되지 않았을 때 발생한다.  
+원인은 다양하지만 예를 들어 github웹에서 데이터를 수정했을 때, 데이터를 pull 하지 않고 push를 하려는 경우 데이터의 손실 경고이다.  
+해결 방법은 아래와 같다.  
+~~~console
+1. 동기화를 위한 pull 이후 push
+git pull -- rebase origin main
+// 또는
+git pull 레포지토리.git
+2. 강제로 push(웹에서 수정하지 않거나 원인을 모르며, 현재 데이터로 덮어씌워도 무관한 경우)
+git push origin _main
+~~~
 
 ## <ins>jekyll 사용 시 자주 뜨는 Error</ins>
 ### Path
