@@ -272,6 +272,17 @@ Libre Office, Firefox 웹 브라우저, VLC 미디어 플레이어, 김프 Adobe
 > 참고 사이트 [https://ingu627.github.io/tips/install_ubuntu/]
 
 
+# <ins>Ubuntu에서 war파일 실행시켜서 local로 확인하기({계정}@DESKTOP경로, aws 등 서버 아님)</ins>
+> 1. 우분투에서 파일의 저장 위치는 상관없는 듯 하나, /home 또는 /home/{계정} 등에 war 파일을 위치시킨다.
+2. 윈도우의 파일 복사는 복사할 경로가 path(ex ....: /home$)로 "cd /mnt/c/{윈도우의 war경로(파일.war까지)} ./" 명령어를 쓴다.
+3. java가 설치되어 있다면, "java -jar 파일명.war"로 실행.
+4. localhost:port번호 및 추가 경로를 입력하면 된다.
+
+> 추가로 돌아가고 있는 war를 백그라운드로 돌리면 우분투 명령어를 사용하면서 가능한데,  
+"nohup java -jar 파일명.war &"를 입력한다. 그리고 다시 커맨드줄이 나오면 성공이고, exit...... 나오면 실패이다.  
+또한 "tail -f -n 100 nohup.out"을 입력하면 로그를 실시간으로 볼 수 있다.
+
+
 # <ins>IFRAME과 EMBED의 차이점(PDF파일 표출)</ins>
 > <b>IFRAME</b>  
 iframe 요소는 인라인 프레임(inline FRAME)을 표시한다.  
