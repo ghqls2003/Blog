@@ -5,7 +5,7 @@ description: "업무 중 공부"
 categories: [work]
 tags: [work, coding]
 redirect_from:
-  - /2023/03/02/
+  - /2023/07/19/
 ---
 
 > 업무 중 공부하거나 복습하는 것.
@@ -245,7 +245,34 @@ Libre Office, Firefox 웹 브라우저, VLC 미디어 플레이어, 김프 Adobe
 조금 더 자세한 설명을 위해서는 먼저 컴퓨터 하드웨어와 운영 체제에 대한 깊은 이해가 필요해 보인다.
 
 
-# IFRAME과 EMBED의 차이점(PDF파일 표출)
+# <ins>윈도우10에서 리눅스(Linux) 설치 - Ubuntu / WSL2 (2022.07.14 기준)
+> 윈도우10 또는 윈도우11의 21H2 버전 이상이어야 WSL2가 설치 가능하다.  
+1. Linux용 Windows 하위 시스템 설정
+ - 제어판 -> 프로그램 및 기능 -> Windows 기능 켜기/끄기 -> Linux용 Windows 하위 시스템 체크
+2. 개발자 모드
+ - 설정 -> 업데이트 및 보완 -> 개발자용 -> 개발자 모드 켬 -> 재부팅
+3. Windows 최신 버전 업데이트
+4. powershell 관리자로 실행
+5. dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart (붙여넣기)
+ - WSL 시스템을 활성화하는 단계
+6. dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart (붙여넣기)
+ - Virtual Machine 기능을 활성화하는 단계
+7. Linux 커널 업데이트 패키지 다운로드
+ - <a href="https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_x64.msi">x64 머신용 최신 WSL2 Linux 커널 업데이트 패키지</a>
+ - 링크를 누르면 자동으로 다운로드 되고 설치를 진행
+8. WSL2 기본 버전 세팅
+ - wsl --set-default-version 2
+ - WSL2를 기본 버전으로 세팅하는 단계
+9. Ubuntu 설치
+ - Microsoft Store에서 Ubuntu를 검색해서 다운로드
+ - 처음 Ubuntu를 실행하면 콘솔창이 열리고 알아서 작동한다.
+ - 이후, 계정 및 암호를 작성하는데 계정이름은 소문자로 작성
+10. Windows Terminal이 존재하거나 설치해주면 끝
+
+> 참고 사이트 [https://ingu627.github.io/tips/install_ubuntu/]
+
+
+# <ins>IFRAME과 EMBED의 차이점(PDF파일 표출)</ins>
 > <b>IFRAME</b>  
 iframe 요소는 인라인 프레임(inline FRAME)을 표시한다.  
 - 인라인 프레임은 문서 내에 다른 문서를 넣기 위한 기술.
