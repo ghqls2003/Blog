@@ -5,7 +5,7 @@ description: "업무 중 공부"
 categories: [work]
 tags: [work, coding]
 redirect_from:
-  - /2023/07/19/
+  - /2024/01/23/
 ---
 
 > 업무 중 공부하거나 복습하는 것.
