@@ -5,7 +5,7 @@ description: "깃허브 사용하기"
 categories: [github]
 tags: [github, jekyll, react_git]
 redirect_from:
-  - /2023/06/28/
+  - /2024/06/05/
 ---
 
 > 깃허브 사용에 관한 것.
@@ -137,3 +137,11 @@ C:\Users\Administrator\Desktop\work_space>Blog----------o
 ~~~~
 webrick의 경우에는 터미널에 "bundle add webrick"을 입력하면 Gemfile에 자동으로 등록이 되고 해결된다.<br>
 <div style="color:salmon">Gemfile이나 config파일을 수정하였을 때는 항상 bundle install로 기능 준비를 해주는 것이 좋다.</div>
+
+### Pages Build Deployment Error
+> jekyll theme를 사용하는 경우에 config.yml에 theme : OOO 으로 작성되어 있는 경우가 있다.  
+이 경우 특정의 theme를 사용한다는 명령어로 github에 주입이 되기 때문에, build 에러가 발생하는 경우가 있다.  
+그렇기 때문에 theme를 주석처리하거나 삭제한다.  
+~~~ruby
+theme: # jekyll-agency
+~~~
