@@ -5,7 +5,7 @@ description: "깃허브 사용하기"
 categories: [github]
 tags: [github, jekyll, react_git]
 redirect_from:
-  - /2024/06/05/
+  - /2024/09/04/
 ---
 
 > 깃허브 사용에 관한 것.
