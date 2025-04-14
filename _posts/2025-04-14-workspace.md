@@ -5,7 +5,7 @@ description: "업무 중 공부"
 categories: [work]
 tags: [work, coding]
 redirect_from:
-  - /2025/01/03/
+  - /2025/04/14/
 ---
 
 > 업무 중 공부하거나 복습하는 것.
@@ -350,4 +350,53 @@ B-tree 인덱스가 설정되어 있는 경우, 숫자 또는 시간 정보 기�
 REG DELETE "HKCU\Control Panel\Quick Actions" /F  
 taskkill /f /im explorer.exe  
 start explorer.exe
+~~~
+
+
+# <ins>전자정부 표준 프레임워크 버전 관리</ins>
+> 전자정부 표준 프레임워크를 사용하는 프로젝트를 관리 중, 버전 업이 필요하여 작업.  
+Maven 프로젝트이기에 pom.xml에서 거의 모든 설정이 이루어졌다. 기타 java 파일에 의존성도 수정이 필요하긴 했다.  
+> <https://www.egovframe.go.kr/wiki/doku.php?id=egovframework:rtemigration4.0> (버전업 가이드)  
+> <https://www.egovframe.go.kr/home/sub.do?menuNo=4> (각 버전별 Release 포인트)
+
+> 기존의 전자정부 표준 프레임워크는 pom.xml에서 <scope></scope>와 <systemPath></systemPath>를 사용하여 직접 /lib 하위의 jar 파일을 참조하였다.  
+프로젝트가 폐쇄망이라 그런줄 알았으나 war 생성 시, dependency 되어 있는 의존성은 war 내부에 모두 생성되기 때문에 필요없다.  
+고로 scope와 systemPath는 외부 라이브러리가 아니라면 굳이 사용할 필요가 없을듯.
+
+> 버전 관리에서 특히 프레임워크와 스프링 버전의 호환성은 정확히 고려되어야 한다. 4.x 버전부터는 더욱 확실한 호환처리가 되어야 작동한다.  
+이에 대한 버전확인은 위의 릴리즈 포인트에 잘 나온다.
+
+> jakarta.validation은 톰캣버전과 spring 5.x버전과 호환되지 않음.  
+javax 또한 hibernate와 그냥 사용하면 로컬 이클립스에서는 Provider 처리되어 실행이 되지만, 개발서버에서는 clean한 classloader에서 돌기 때문에 작동되지 않음.  
+그래서 JSR 310 의존성 추가.
+
+~~~xml
+validation은 4.x버전과 호환되지 않아 새롭게 작성했다.
+<!-- 기존 -->
+<dependency>
+    <groupId>spring-modules-validation</groupId>
+    <artifactId>spring-modules-validation</artifactId>
+    <version>0.9</version>
+    <scope>system</scope>
+    <systemPath>${basedir}/src/main/webapp/WEB-INF/lib/spring-modules-validation-0.9.jar</systemPath>
+</dependency>
+<!-- 변경 -->
+<!-- Bean Validation API -->
+<dependency>
+    <groupId>javax.validation</groupId>
+    <artifactId>validation-api</artifactId>
+    <version>2.0.1.Final</version>
+</dependency>
+<!-- Hibernate Validator (필수 구현체) -->
+<dependency>
+    <groupId>org.hibernate.validator</groupId>
+    <artifactId>hibernate-validator</artifactId>
+    <version>6.1.5.Final</version>
+</dependency>
+<!-- JSR 310 (LocalDate, etc) 지원 -->
+<dependency>
+    <groupId>org.glassfish</groupId>
+    <artifactId>javax.el</artifactId>
+    <version>3.0.0</version>
+</dependency>
 ~~~
